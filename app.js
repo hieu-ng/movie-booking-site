@@ -41,6 +41,12 @@ function populateUI() {
     });
 }
 
+const selectedMovieInsex = localStorage.getItem('selectedMovieIndex');
+
+if (selectedMovieInsex !== null) {
+    movieSelect.selectedIndex = selectedMovieInsex;
+}
+
 movieSelect.addEventListener('change', (e) => {
 	ticketPrice = parseInt(e.target.value);
 	setMovieData(e.target.selectedIndex, e.target.value);
