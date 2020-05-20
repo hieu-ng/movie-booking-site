@@ -4,7 +4,7 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
-const ticketPrice = parseInt(movieSelect.nodeValue);
+let ticketPrice = parseInt(movieSelect.nodeValue);
 
 function updateSelectedCount() {
 	const selectedSeats = document.querySelectorAll('.row.seat.selected');
