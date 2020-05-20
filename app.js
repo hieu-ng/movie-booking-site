@@ -6,6 +6,12 @@ const movieSelect = document.getElementById('movie');
 
 let ticketPrice = parseInt(movieSelect.nodeValue);
 
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice) {
+	localStorage.setItem('selectedMovieIndex', movieIndex);
+	localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
 function updateSelectedCount() {
 	const selectedSeats = document.querySelectorAll('.row.seat.selected');
 	// Storing value of selectedSeat to localStorage.
